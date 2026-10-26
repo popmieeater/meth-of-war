@@ -1,0 +1,1509 @@
+[gd_scene format=3 uid="uid://rmiuy53frkp"]
+
+[ext_resource type="Texture2D" uid="uid://eeydtkt0mvb8" path="res://miscellaneous/uirect1.png" id="1_bkj7p"]
+[ext_resource type="Script" uid="uid://cf3ktc75claf3" path="res://attacktabactivity.gd" id="1_f0btx"]
+[ext_resource type="Texture2D" uid="uid://bq6ev1vee8mn" path="res://miscellaneous/uirect2.png" id="3_f0btx"]
+[ext_resource type="FontFile" uid="uid://dm4awf8s8mfgw" path="res://m5x7.ttf" id="3_hdn1k"]
+[ext_resource type="Texture2D" uid="uid://ck76a6odr8pkk" path="res://miscellaneous/buttoncks.png" id="3_oaaqa"]
+[ext_resource type="AudioStream" uid="uid://d3ur1vuqjrfas" path="res://audio/sfxs/bokudan.mp3" id="6_ucdb5"]
+[ext_resource type="Texture2D" uid="uid://4rrvcjn76i62" path="res://miscellaneous/mathop.png" id="6_xr4xb"]
+[ext_resource type="Texture2D" uid="uid://b2x0w4nitvee" path="res://miscellaneous/numbutton.png" id="6_ycipa"]
+[ext_resource type="Texture2D" uid="uid://cvyd1irlccu7t" path="res://miscellaneous/difficulty.png" id="7_erx70"]
+[ext_resource type="FontFile" uid="uid://cojiga7p4342y" path="res://comicallpixel.png" id="7_hdgf4"]
+[ext_resource type="Texture2D" uid="uid://q7bqb72s6bh7" path="res://miscellaneous/arrowleftrigh.png" id="7_ycipa"]
+[ext_resource type="FontFile" uid="uid://pfp6cjslfegb" path="res://comicallpixeloutlined.png" id="8_hdgf4"]
+[ext_resource type="FontFile" uid="uid://bypx6upn3p50h" path="res://comicallpixelblackie.png" id="11_261fe"]
+[ext_resource type="Texture2D" uid="uid://bajojnq754tqa" path="res://miscellaneous/domainxy.png" id="12_el5ef"]
+[ext_resource type="Texture2D" uid="uid://bj2sxi3x0tbd4" path="res://miscellaneous/greenbutt.png" id="15_pgwpt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fu6yt"]
+texture = ExtResource("3_oaaqa")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(55, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qs2l6"]
+texture = ExtResource("3_oaaqa")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(55, 11, 11, 11)
+
+[sub_resource type="FontVariation" id="FontVariation_hdgf4"]
+base_font = ExtResource("7_hdgf4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6gd2f"]
+texture = ExtResource("3_f0btx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r8v6r"]
+texture = ExtResource("3_f0btx")
+texture_margin_left = 2.0
+texture_margin_top = 3.0
+texture_margin_right = 2.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 11, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t30m4"]
+atlas = ExtResource("7_erx70")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iiqb6"]
+texture = ExtResource("3_f0btx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hossm"]
+texture = ExtResource("3_f0btx")
+texture_margin_left = 2.0
+texture_margin_top = 3.0
+texture_margin_right = 2.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 11, 11, 11)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_erx70"]
+load_path = "res://.godot/imported/buttoncks.png-accd1d4fd398ea47e32c2f5f8948f432.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tagci"]
+atlas = ExtResource("7_erx70")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="FontVariation" id="FontVariation_261fe"]
+base_font = ExtResource("8_hdgf4")
+spacing_glyph = -3
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ogkg2"]
+texture = ExtResource("6_xr4xb")
+texture_margin_left = 1.0
+texture_margin_top = 3.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(0, 0, 3, 5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hdgf4"]
+load_path = "res://.godot/imported/mathop.png-42290709c4acf0b6e225af5bdda766ac.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mlldh"]
+texture = SubResource("CompressedTexture2D_hdgf4")
+texture_margin_left = 1.0
+texture_margin_top = 3.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(0, 5, 3, 5)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_hdgf4"]
+allow_unpress = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlldh"]
+atlas = ExtResource("6_xr4xb")
+region = Rect2(10, 0, 7, 8)
+margin = Rect2(0.165, 1, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdgf4"]
+atlas = ExtResource("6_xr4xb")
+region = Rect2(3, 4, 5, 7)
+margin = Rect2(0, 1, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_261fe"]
+atlas = ExtResource("6_xr4xb")
+region = Rect2(28, 0, 5, 5)
+margin = Rect2(0, 1, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_erx70"]
+atlas = ExtResource("6_xr4xb")
+region = Rect2(3, 0, 7, 4)
+margin = Rect2(0.165, 3, 0, 4)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_el5ef"]
+load_path = "res://.godot/imported/mathop.png-42290709c4acf0b6e225af5bdda766ac.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgwpt"]
+atlas = ExtResource("6_xr4xb")
+region = Rect2(10, 0, 7, 8)
+margin = Rect2(0.165, 1, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5jouo"]
+texture = ExtResource("3_oaaqa")
+region_rect = Rect2(33, 13, 11, 7)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cwbtf"]
+texture = ExtResource("3_oaaqa")
+region_rect = Rect2(33, 2, 11, 7)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7b4f4"]
+texture = ExtResource("3_oaaqa")
+region_rect = Rect2(33, 13, 11, 7)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_15wa2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhga8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q8qxb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l1hp7"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(0, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ycipa"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(0, 22, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t30m4"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(11, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tagci"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(11, 22, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fvca2"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(22, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cyryb"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(22, 22, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jj4h8"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(33, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5i8wy"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(33, 22, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_21guk"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(44, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3b0e4"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(44, 22, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_erx70"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(0, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_el5ef"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(0, 33, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5lstf"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(11, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2jms6"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(11, 33, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_261fe"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(11, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cchxq"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(22, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vyq6f"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(22, 33, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pgwpt"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(33, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xog08"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(33, 33, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ii42n"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(33, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2fxp2"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(44, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_slrf4"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(44, 33, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ipcbx"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(44, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y5byf"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(55, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fvx34"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(55, 33, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5gj6"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(55, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uclbm"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(55, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q863m"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(55, 22, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oa3j4"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(55, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fnmww"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(66, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wbp3"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(66, 22, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cahgl"]
+texture = ExtResource("6_ycipa")
+region_rect = Rect2(66, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b11x2"]
+texture = ExtResource("7_ycipa")
+region_rect = Rect2(12, 0, 12, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xr4xb"]
+texture = ExtResource("7_ycipa")
+region_rect = Rect2(12, 13, 12, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hdgf4"]
+texture = ExtResource("7_ycipa")
+region_rect = Rect2(12, 0, 12, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oadfx"]
+texture = ExtResource("12_el5ef")
+region_rect = Rect2(0, 0, 20, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o413k"]
+texture = ExtResource("12_el5ef")
+region_rect = Rect2(0, 33, 20, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_el5ef"]
+atlas = ExtResource("3_oaaqa")
+region = Rect2(44, 24, 11, 7)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15wa2"]
+texture = ExtResource("3_oaaqa")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(44, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mhga8"]
+texture = ExtResource("3_oaaqa")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(44, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q8qxb"]
+texture = ExtResource("3_oaaqa")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(44, 0, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oadfx"]
+atlas = ExtResource("3_oaaqa")
+region = Rect2(46, 24, 7, 7)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iyh65"]
+texture = ExtResource("15_pgwpt")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(11, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k01ul"]
+texture = ExtResource("15_pgwpt")
+texture_margin_left = 2.0
+texture_margin_top = 3.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(11, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_it385"]
+texture = ExtResource("15_pgwpt")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(11, 0, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xog08"]
+atlas = ExtResource("3_oaaqa")
+region = Rect2(66, 22, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dixf5"]
+texture = ExtResource("15_pgwpt")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(66, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vdq1"]
+texture = ExtResource("15_pgwpt")
+texture_margin_left = 2.0
+texture_margin_top = 3.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(66, 11, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mc4i"]
+atlas = ExtResource("3_oaaqa")
+region = Rect2(33, 22, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8j7oj"]
+texture = ExtResource("15_pgwpt")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(55, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dgg5m"]
+texture = ExtResource("15_pgwpt")
+texture_margin_left = 2.0
+texture_margin_top = 3.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(55, 11, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgg5m"]
+atlas = ExtResource("3_oaaqa")
+region = Rect2(22, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o0b3j"]
+texture = ExtResource("15_pgwpt")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(22, 0, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5mc4i"]
+texture = ExtResource("15_pgwpt")
+texture_margin_left = 2.0
+texture_margin_top = 3.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(55, 11, 11, 11)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k2jas"]
+texture = ExtResource("15_pgwpt")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(55, 0, 11, 11)
+
+[node name="troopser" type="Control" unique_id=744534550]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+script = ExtResource("1_f0btx")
+
+[node name="penghalangklik" type="ColorRect" parent="." unique_id=2009617527]
+light_mask = 2
+visibility_layer = 2
+z_index = 51
+layout_mode = 0
+offset_left = -806.0
+offset_top = -733.0
+offset_right = 823.0
+offset_bottom = 752.0
+color = Color(1, 1, 1, 0)
+
+[node name="tabarea" type="Control" parent="." unique_id=1661260452]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -842.0
+offset_top = 432.0
+offset_right = 766.0
+offset_bottom = 1152.0
+grow_horizontal = 2
+
+[node name="executab" type="Button" parent="tabarea" unique_id=1000306739]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 322.0
+offset_top = 468.0
+offset_right = 377.0
+offset_bottom = 479.0
+grow_horizontal = 2
+scale = Vector2(8, 8)
+pivot_offset = Vector2(26.375, 0.377604)
+theme_override_styles/normal = SubResource("StyleBoxTexture_fu6yt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qs2l6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fu6yt")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_fu6yt")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="tabarea/executab" unique_id=569738276]
+layout_mode = 0
+offset_left = -0.296875
+offset_top = 1.0804062
+offset_right = 57.703125
+offset_bottom = 12.080406
+size_flags_horizontal = 4
+theme_override_constants/separation = -1
+alignment = 1
+
+[node name="Tembakk" type="Label" parent="tabarea/executab/VBoxContainer" unique_id=1559608048]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_hdgf4")
+text = "jalankan!"
+horizontal_alignment = 1
+
+[node name="nametab" type="NinePatchRect" parent="tabarea" unique_id=9081654]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 616.0
+offset_right = 896.0
+offset_bottom = 633.0
+scale = Vector2(8, 8)
+pivot_offset = Vector2(108, 39.375)
+texture = ExtResource("1_bkj7p")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 5
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="tabarea/nametab" unique_id=2026437129]
+z_index = 1
+layout_mode = 0
+offset_left = 5.5
+offset_top = 5.453125
+offset_right = 59.5
+offset_bottom = 11.453125
+theme_override_fonts/font = ExtResource("7_hdgf4")
+text = "troop"
+horizontal_alignment = 1
+
+[node name="maintab" type="NinePatchRect" parent="tabarea" unique_id=345670849]
+layout_mode = 0
+offset_left = 802.0
+offset_top = 720.0
+offset_right = 992.0
+offset_bottom = 752.0
+scale = Vector2(8, 8)
+pivot_offset = Vector2(108, 39.375)
+texture = ExtResource("1_bkj7p")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 5
+patch_margin_bottom = 4
+
+[node name="attackopts" type="HBoxContainer" parent="tabarea/maintab" unique_id=345876892]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -89.75
+offset_top = 6.453125
+offset_right = 90.25
+offset_bottom = 26.453125
+grow_horizontal = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="ltroopbutton" type="Button" parent="tabarea/maintab/attackopts" unique_id=837717096]
+custom_minimum_size = Vector2(40, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_6gd2f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_r8v6r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6gd2f")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tabarea/maintab/attackopts/ltroopbutton" unique_id=552138632]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -17.75
+offset_top = 0.99999994
+offset_right = 1202.2499
+offset_bottom = 145.0
+grow_horizontal = 2
+scale = Vector2(0.03, 0.03)
+theme_override_fonts/normal_font = ExtResource("3_hdn1k")
+theme_override_font_sizes/normal_font_size = 180
+text = "Tembak Linier"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="tabarea/maintab/attackopts/ltroopbutton" unique_id=1417657507]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -12.375
+offset_top = 5.0
+offset_right = -1.375
+offset_bottom = 16.0
+grow_horizontal = 2
+texture = ExtResource("3_oaaqa")
+region_rect = Rect2(0, 0, 11, 11)
+
+[node name="TextureRect" type="TextureRect" parent="tabarea/maintab/attackopts/ltroopbutton" unique_id=1360815934]
+layout_mode = 0
+offset_left = 19.375
+offset_top = 5.5
+offset_right = 35.375
+offset_bottom = 21.5
+texture = SubResource("AtlasTexture_t30m4")
+
+[node name="etroopbutton" type="Button" parent="tabarea/maintab/attackopts" unique_id=320079988]
+custom_minimum_size = Vector2(40, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_iiqb6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hossm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6gd2f")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tabarea/maintab/attackopts/etroopbutton" unique_id=2147287482]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -17.75
+offset_top = 0.99999994
+offset_right = 1202.2499
+offset_bottom = 145.0
+grow_horizontal = 2
+scale = Vector2(0.03, 0.03)
+theme_override_fonts/normal_font = ExtResource("3_hdn1k")
+theme_override_font_sizes/normal_font_size = 180
+text = "Tembak Eksponensial"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="tabarea/maintab/attackopts/etroopbutton" unique_id=632673601]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -12.5
+offset_top = 5.25
+offset_right = -1.5
+offset_bottom = 16.25
+grow_horizontal = 2
+texture = SubResource("CompressedTexture2D_erx70")
+region_rect = Rect2(11, 11, 11, 11)
+
+[node name="TextureRect2" type="TextureRect" parent="tabarea/maintab/attackopts/etroopbutton" unique_id=784589775]
+layout_mode = 0
+offset_left = 18.875
+offset_top = 6.0
+offset_right = 34.875
+offset_bottom = 22.0
+texture = SubResource("AtlasTexture_tagci")
+
+[node name="attackspec" type="HBoxContainer" parent="tabarea/maintab" unique_id=1768400636]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -89.75
+offset_top = 6.453125
+offset_right = 90.25
+offset_bottom = 26.453125
+grow_horizontal = 2
+
+[node name="inputangraph" type="VBoxContainer" parent="tabarea/maintab/attackspec" unique_id=526850213]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="kets" type="Control" parent="tabarea/maintab/attackspec/inputangraph" unique_id=1962182507]
+custom_minimum_size = Vector2(88.49, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ket" type="Control" parent="tabarea/maintab/attackspec/inputangraph/kets" unique_id=1460084726]
+anchors_preset = 0
+offset_top = -0.99999046
+offset_right = 160.0
+offset_bottom = 30.999994
+scale = Vector2(0.625, 0.625)
+
+[node name="linierket" type="Label" parent="tabarea/maintab/attackspec/inputangraph/kets/ket" unique_id=1814417242]
+modulate = Color(1, 1, 1, 0.5137255)
+z_index = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = -1.335144e-05
+offset_right = 102.0
+offset_bottom = 14.999987
+theme_override_fonts/font = SubResource("FontVariation_hdgf4")
+text = "grafik linier
+y=mx+b"
+
+[node name="quadket" type="Label" parent="tabarea/maintab/attackspec/inputangraph/kets/ket" unique_id=295606840]
+visible = false
+modulate = Color(1, 1, 1, 0.5137255)
+z_index = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = -1.21593475e-05
+offset_right = 80.0
+offset_bottom = 14.999988
+theme_override_fonts/font = SubResource("FontVariation_hdgf4")
+text = "grafik kuadrat
+y=ax^2=bx=c"
+
+[node name="expoket" type="Label" parent="tabarea/maintab/attackspec/inputangraph/kets/ket" unique_id=1123524465]
+visible = false
+modulate = Color(1, 1, 1, 0.5137255)
+z_index = 1
+layout_mode = 0
+offset_left = 2.000002
+offset_top = -1.335144e-05
+offset_right = 104.0
+offset_bottom = 14.999987
+theme_override_fonts/font = SubResource("FontVariation_hdgf4")
+text = "grafik eksponensial
+y=ka^x+c"
+
+[node name="absoket" type="Label" parent="tabarea/maintab/attackspec/inputangraph/kets/ket" unique_id=780147291]
+visible = false
+modulate = Color(1, 1, 1, 0.5137255)
+z_index = 1
+layout_mode = 0
+offset_left = 2.000002
+offset_top = -1.335144e-05
+offset_right = 104.0
+offset_bottom = 14.999987
+theme_override_fonts/font = SubResource("FontVariation_hdgf4")
+text = "grafik absolut
+y=a|x-h|+c"
+
+[node name="contlinier" type="HBoxContainer" parent="tabarea/maintab/attackspec/inputangraph" unique_id=1989565601]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="rumusanlinier" type="Control" parent="tabarea/maintab/attackspec/inputangraph/contlinier" unique_id=1240894233]
+custom_minimum_size = Vector2(14, 0)
+layout_mode = 2
+
+[node name="samdeng" type="NinePatchRect" parent="tabarea/maintab/attackspec/inputangraph/contlinier/rumusanlinier" unique_id=1587606990]
+layout_mode = 0
+offset_left = 6.75
+offset_top = 2.0
+offset_right = 13.75
+offset_bottom = 6.0
+texture = ExtResource("6_xr4xb")
+region_rect = Rect2(3, 0, 7, 4)
+patch_margin_left = 2
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="samdeng2" type="NinePatchRect" parent="tabarea/maintab/attackspec/inputangraph/contlinier/rumusanlinier/samdeng" unique_id=1821700331]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 7.0
+offset_bottom = 7.0
+texture = ExtResource("6_xr4xb")
+region_rect = Rect2(3, 0, 7, 4)
+patch_margin_left = 2
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="yylin" type="RichTextLabel" parent="tabarea/maintab/attackspec/inputangraph/contlinier/rumusanlinier/samdeng" unique_id=2145040115]
+layout_mode = 0
+offset_left = -6.0
+offset_right = 2.0
+offset_bottom = 8.0
+theme_override_fonts/normal_font = SubResource("FontVariation_261fe")
+text = "y"
+fit_content = true
+scroll_active = false
+
+[node name="gradlin" type="Button" parent="tabarea/maintab/attackspec/inputangraph/contlinier" unique_id=464190750]
+custom_minimum_size = Vector2(10, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ogkg2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mlldh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ogkg2")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_hdgf4")
+text = "m"
+
+[node name="xxlin" type="Label" parent="tabarea/maintab/attackspec/inputangraph/contlinier" unique_id=1697121412]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+text = "x"
+vertical_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="tabarea/maintab/attackspec/inputangraph/contlinier" unique_id=1216580992]
+layout_mode = 2
+texture = SubResource("AtlasTexture_mlldh")
+stretch_mode = 2
+
+[node name="constlin" type="Button" parent="tabarea/maintab/attackspec/inputangraph/contlinier" unique_id=202803607]
+custom_minimum_size = Vector2(10, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ogkg2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mlldh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ogkg2")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_hdgf4")
+text = "b"
+
+[node name="contquad" type="HBoxContainer" parent="tabarea/maintab/attackspec/inputangraph" unique_id=1726239952]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="rumusanquad" type="Control" parent="tabarea/maintab/attackspec/inputangraph/contquad" unique_id=610880571]
+custom_minimum_size = Vector2(14, 0)
+layout_mode = 2
+
+[node name="samdeng" type="NinePatchRect" parent="tabarea/maintab/attackspec/inputangraph/contquad/rumusanquad" unique_id=186269412]
+layout_mode = 0
+offset_left = 6.75
+offset_top = 2.0
+offset_right = 13.75
+offset_bottom = 6.0
+texture = ExtResource("6_xr4xb")
+region_rect = Rect2(3, 0, 7, 4)
+patch_margin_left = 2
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="samdeng2" type="NinePatchRect" parent="tabarea/maintab/attackspec/inputangraph/contquad/rumusanquad/samdeng" unique_id=897771473]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 7.0
+offset_bottom = 7.0
+texture = ExtResource("6_xr4xb")
+region_rect = Rect2(3, 0, 7, 4)
+patch_margin_left = 2
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="yy" type="RichTextLabel" parent="tabarea/maintab/attackspec/inputangraph/contquad/rumusanquad/samdeng" unique_id=1014440910]
+layout_mode = 0
+offset_left = -6.0
+offset_right = 2.0
+offset_bottom = 8.0
+theme_override_fonts/normal_font = SubResource("FontVariation_261fe")
+text = "y"
+fit_content = true
+scroll_active = false
+
+[node name="Button" type="Button" parent="tabarea/maintab/attackspec/inputangraph/contquad" unique_id=797849041]
+custom_minimum_size = Vector2(10, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ogkg2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mlldh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ogkg2")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_hdgf4")
+text = "a"
+
+[node name="xxquad" type="Label" parent="tabarea/maintab/attackspec/inputangraph/contquad" unique_id=2077715336]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+text = "x"
+vertical_alignment = 2
+
+[node name="TextureRect2" type="TextureRect" parent="tabarea/maintab/attackspec/inputangraph/contquad" unique_id=1320075635]
+layout_mode = 2
+texture = SubResource("AtlasTexture_hdgf4")
+stretch_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="tabarea/maintab/attackspec/inputangraph/contquad" unique_id=1988219691]
+layout_mode = 2
+texture = SubResource("AtlasTexture_mlldh")
+stretch_mode = 2
+
+[node name="Button2" type="Button" parent="tabarea/maintab/attackspec/inputangraph/contquad" unique_id=1248817149]
+custom_minimum_size = Vector2(10, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ogkg2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mlldh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ogkg2")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_hdgf4")
+text = "b"
+
+[node name="xxquad2" type="Label" parent="tabarea/maintab/attackspec/inputangraph/contquad" unique_id=1764976913]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+text = "x"
+vertical_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="tabarea/maintab/attackspec/inputangraph/contquad" unique_id=1166113283]
+layout_mode = 2
+texture = SubResource("AtlasTexture_mlldh")
+stretch_mode = 2
+
+[node name="Button3" type="Button" parent="tabarea/maintab/attackspec/inputangraph/contquad" unique_id=252913582]
+custom_minimum_size = Vector2(10, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ogkg2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mlldh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ogkg2")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_hdgf4")
+text = "c"
+
+[node name="contexpo" type="HBoxContainer" parent="tabarea/maintab/attackspec/inputangraph" unique_id=513617480]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="rumusanexpo" type="Control" parent="tabarea/maintab/attackspec/inputangraph/contexpo" unique_id=942243148]
+custom_minimum_size = Vector2(14, 0)
+layout_mode = 2
+
+[node name="samdeng" type="NinePatchRect" parent="tabarea/maintab/attackspec/inputangraph/contexpo/rumusanexpo" unique_id=2101167481]
+layout_mode = 0
+offset_left = 6.75
+offset_top = 2.0
+offset_right = 13.75
+offset_bottom = 6.0
+texture = ExtResource("6_xr4xb")
+region_rect = Rect2(3, 0, 7, 4)
+patch_margin_left = 2
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="samdeng2" type="NinePatchRect" parent="tabarea/maintab/attackspec/inputangraph/contexpo/rumusanexpo/samdeng" unique_id=764129870]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 7.0
+offset_bottom = 7.0
+texture = ExtResource("6_xr4xb")
+region_rect = Rect2(3, 0, 7, 4)
+patch_margin_left = 2
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="yyexpo" type="RichTextLabel" parent="tabarea/maintab/attackspec/inputangraph/contexpo/rumusanexpo/samdeng" unique_id=133588674]
+layout_mode = 0
+offset_left = -6.0
+offset_right = 2.0
+offset_bottom = 8.0
+theme_override_fonts/normal_font = SubResource("FontVariation_261fe")
+text = "y"
+fit_content = true
+scroll_active = false
+
+[node name="multiexpo" type="Button" parent="tabarea/maintab/attackspec/inputangraph/contexpo" unique_id=1730859436]
+custom_minimum_size = Vector2(10, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ogkg2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mlldh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ogkg2")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_hdgf4")
+text = "k"
+
+[node name="growthexpo" type="Button" parent="tabarea/maintab/attackspec/inputangraph/contexpo" unique_id=1471457599]
+custom_minimum_size = Vector2(10, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ogkg2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mlldh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ogkg2")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_hdgf4")
+text = "a"
+
+[node name="TextureRect2" type="TextureRect" parent="tabarea/maintab/attackspec/inputangraph/contexpo" unique_id=229034111]
+layout_mode = 2
+texture = SubResource("AtlasTexture_261fe")
+stretch_mode = 2
+
+[node name="xxexpo" type="Label" parent="tabarea/maintab/attackspec/inputangraph/contexpo" unique_id=403267108]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+text = "x"
+vertical_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="tabarea/maintab/attackspec/inputangraph/contexpo" unique_id=816781464]
+layout_mode = 2
+texture = SubResource("AtlasTexture_mlldh")
+stretch_mode = 2
+
+[node name="constexpo" type="Button" parent="tabarea/maintab/attackspec/inputangraph/contexpo" unique_id=1569510883]
+custom_minimum_size = Vector2(10, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ogkg2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mlldh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ogkg2")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_hdgf4")
+text = "c"
+
+[node name="contabso" type="HBoxContainer" parent="tabarea/maintab/attackspec/inputangraph" unique_id=847977371]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="rumusanquad" type="Control" parent="tabarea/maintab/attackspec/inputangraph/contabso" unique_id=1352462981]
+custom_minimum_size = Vector2(14, 0)
+layout_mode = 2
+
+[node name="samdeng" type="NinePatchRect" parent="tabarea/maintab/attackspec/inputangraph/contabso/rumusanquad" unique_id=607414429]
+layout_mode = 0
+offset_left = 6.75
+offset_top = 2.0
+offset_right = 13.75
+offset_bottom = 6.0
+texture = ExtResource("6_xr4xb")
+region_rect = Rect2(3, 0, 7, 4)
+patch_margin_left = 2
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="samdeng2" type="NinePatchRect" parent="tabarea/maintab/attackspec/inputangraph/contabso/rumusanquad/samdeng" unique_id=1626725703]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 7.0
+offset_bottom = 7.0
+texture = ExtResource("6_xr4xb")
+region_rect = Rect2(3, 0, 7, 4)
+patch_margin_left = 2
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="yy" type="RichTextLabel" parent="tabarea/maintab/attackspec/inputangraph/contabso/rumusanquad/samdeng" unique_id=1313874116]
+layout_mode = 0
+offset_left = -6.0
+offset_right = 2.0
+offset_bottom = 8.0
+theme_override_fonts/normal_font = SubResource("FontVariation_261fe")
+text = "y"
+fit_content = true
+scroll_active = false
+
+[node name="Button" type="Button" parent="tabarea/maintab/attackspec/inputangraph/contabso" unique_id=1718087329]
+custom_minimum_size = Vector2(10, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ogkg2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mlldh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ogkg2")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_hdgf4")
+text = "a"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="tabarea/maintab/attackspec/inputangraph/contabso" unique_id=2014547253]
+custom_minimum_size = Vector2(3, 10)
+layout_mode = 2
+texture = ExtResource("6_xr4xb")
+region_rect = Rect2(25, 0, 3, 6)
+patch_margin_left = 1
+patch_margin_top = 2
+patch_margin_right = 1
+patch_margin_bottom = 3
+
+[node name="Label2" type="Label" parent="tabarea/maintab/attackspec/inputangraph/contabso" unique_id=1203007813]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+text = "x"
+vertical_alignment = 2
+
+[node name="TextureRect3" type="TextureRect" parent="tabarea/maintab/attackspec/inputangraph/contabso" unique_id=626741340]
+layout_mode = 2
+texture = SubResource("AtlasTexture_erx70")
+stretch_mode = 2
+
+[node name="Button2" type="Button" parent="tabarea/maintab/attackspec/inputangraph/contabso" unique_id=653543428]
+custom_minimum_size = Vector2(10, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ogkg2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mlldh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ogkg2")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_hdgf4")
+text = "h"
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="tabarea/maintab/attackspec/inputangraph/contabso" unique_id=882653957]
+custom_minimum_size = Vector2(3, 10)
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_el5ef")
+region_rect = Rect2(25, 0, 3, 6)
+patch_margin_left = 1
+patch_margin_top = 2
+patch_margin_right = 1
+patch_margin_bottom = 3
+
+[node name="TextureRect4" type="TextureRect" parent="tabarea/maintab/attackspec/inputangraph/contabso" unique_id=1414305853]
+layout_mode = 2
+texture = SubResource("AtlasTexture_pgwpt")
+stretch_mode = 2
+
+[node name="Button3" type="Button" parent="tabarea/maintab/attackspec/inputangraph/contabso" unique_id=1418892884]
+custom_minimum_size = Vector2(10, 9)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ogkg2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mlldh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ogkg2")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_hdgf4")
+text = "c
+"
+
+[node name="unreview" type="Button" parent="tabarea/maintab" unique_id=1230501234]
+layout_mode = 0
+offset_left = 167.5
+offset_top = -7.546875
+offset_right = 178.5
+offset_bottom = -0.546875
+theme_override_styles/normal = SubResource("StyleBoxTexture_5jouo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cwbtf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7b4f4")
+toggle_mode = true
+
+[node name="exitbutton" type="Button" parent="tabarea/maintab" unique_id=1815689951]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.9850001
+anchor_top = 0.08800001
+anchor_right = 0.9850001
+anchor_bottom = 0.08800001
+offset_left = -8.150009
+offset_top = -11.362875
+offset_right = -0.15000916
+offset_bottom = -3.3628752
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_15wa2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mhga8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_q8qxb")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="tabarea/maintab/exitbutton" unique_id=163953349]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.25
+offset_top = -0.875
+offset_right = 5.75
+offset_bottom = 10.125
+grow_horizontal = 2
+texture = ExtResource("3_oaaqa")
+region_rect = Rect2(11, 22, 11, 11)
+
+[node name="numpad" type="Control" parent="tabarea/maintab" unique_id=1815891450]
+visible = false
+custom_minimum_size = Vector2(71, 0)
+anchors_preset = 0
+offset_left = 135.25
+offset_top = 6.453125
+offset_right = 206.25
+offset_bottom = 26.453125
+
+[node name="buttone" type="Button" parent="tabarea/maintab/numpad" unique_id=1829498356]
+layout_mode = 0
+offset_left = -58.75
+offset_top = -3.0
+offset_right = -47.75
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_l1hp7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ycipa")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l1hp7")
+
+[node name="butttwo" type="Button" parent="tabarea/maintab/numpad" unique_id=333278950]
+layout_mode = 0
+offset_left = -48.75
+offset_top = -3.0
+offset_right = -37.75
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_t30m4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tagci")
+theme_override_styles/hover = SubResource("StyleBoxTexture_t30m4")
+
+[node name="buttthree" type="Button" parent="tabarea/maintab/numpad" unique_id=520491872]
+layout_mode = 0
+offset_left = -38.75
+offset_top = -3.0
+offset_right = -27.75
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_fvca2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cyryb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fvca2")
+
+[node name="buttfour" type="Button" parent="tabarea/maintab/numpad" unique_id=1097161833]
+layout_mode = 0
+offset_left = -28.75
+offset_top = -3.0
+offset_right = -17.75
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_jj4h8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5i8wy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jj4h8")
+
+[node name="buttfive" type="Button" parent="tabarea/maintab/numpad" unique_id=970855075]
+layout_mode = 0
+offset_left = -18.75
+offset_top = -3.0
+offset_right = -7.75
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_21guk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3b0e4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_21guk")
+
+[node name="buttsix" type="Button" parent="tabarea/maintab/numpad" unique_id=1643418876]
+layout_mode = 0
+offset_left = -8.75
+offset_top = -3.0
+offset_right = 2.25
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_erx70")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_el5ef")
+theme_override_styles/hover = SubResource("StyleBoxTexture_erx70")
+
+[node name="buttseven" type="Button" parent="tabarea/maintab/numpad" unique_id=872231939]
+layout_mode = 0
+offset_left = 1.25
+offset_top = -3.0
+offset_right = 12.25
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_5lstf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2jms6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_261fe")
+
+[node name="butteight" type="Button" parent="tabarea/maintab/numpad" unique_id=950300454]
+layout_mode = 0
+offset_left = 11.25
+offset_top = -3.0
+offset_right = 22.25
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_cchxq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vyq6f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cchxq")
+
+[node name="buttnine" type="Button" parent="tabarea/maintab/numpad" unique_id=430251473]
+layout_mode = 0
+offset_left = 21.25
+offset_top = -3.0
+offset_right = 32.25
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_pgwpt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xog08")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ii42n")
+
+[node name="buttzero" type="Button" parent="tabarea/maintab/numpad" unique_id=271872900]
+layout_mode = 0
+offset_left = 31.25
+offset_top = -3.0
+offset_right = 42.25
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_2fxp2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_slrf4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ipcbx")
+
+[node name="buttkoma" type="Button" parent="tabarea/maintab/numpad" unique_id=1637027078]
+layout_mode = 0
+offset_left = 41.25
+offset_top = -3.0
+offset_right = 52.25
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_y5byf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fvx34")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j5gj6")
+
+[node name="buttminus" type="Button" parent="tabarea/maintab/numpad" unique_id=952107574]
+layout_mode = 0
+offset_left = 41.25
+offset_top = 7.0
+offset_right = 52.25
+offset_bottom = 18.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_uclbm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q863m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_oa3j4")
+keep_pressed_outside = true
+
+[node name="buttdelete" type="Button" parent="tabarea/maintab/numpad" unique_id=123926590]
+layout_mode = 0
+offset_left = 31.25
+offset_top = 7.0
+offset_right = 42.25
+offset_bottom = 18.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_fnmww")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0wbp3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cahgl")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="tabarea/maintab/numpad" unique_id=1836716028]
+visible = false
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 1.0
+offset_right = 35.0
+offset_bottom = 21.0
+texture = ExtResource("7_ycipa")
+region_rect = Rect2(24, 0, 12, 13)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tabarea/maintab/numpad/NinePatchRect" unique_id=1539991032]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 423.0
+offset_bottom = 204.0
+scale = Vector2(0.075, 0.075)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_hdn1k")
+theme_override_font_sizes/normal_font_size = 256
+text = "-30"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="addtroop" type="Button" parent="tabarea/maintab/numpad/NinePatchRect" unique_id=1814679934]
+layout_mode = 0
+offset_left = 28.0
+offset_top = -3.0
+offset_right = 40.0
+offset_bottom = 9.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_b11x2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xr4xb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hdgf4")
+
+[node name="domianxy" type="Button" parent="tabarea/maintab" unique_id=1502003838]
+layout_mode = 0
+offset_left = 91.125
+offset_top = -11.796875
+offset_right = 111.125
+offset_bottom = -0.796875
+theme_override_styles/normal = SubResource("StyleBoxTexture_oadfx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_o413k")
+theme_override_styles/hover = SubResource("StyleBoxTexture_oadfx")
+toggle_mode = true
+
+[node name="xydom" type="Label" parent="tabarea/maintab/domianxy" unique_id=1533212987]
+layout_mode = 0
+offset_left = 2.875
+offset_top = 2.875
+offset_right = 8.875
+offset_bottom = 8.875
+theme_override_fonts/font = ExtResource("7_hdgf4")
+text = "x"
+
+[node name="swapxy" type="Button" parent="tabarea/maintab" unique_id=177355228]
+layout_mode = 0
+offset_left = 69.25
+offset_top = -11.546875
+offset_right = 84.25
+offset_bottom = -0.546875
+theme_override_fonts/font = ExtResource("11_261fe")
+theme_override_icons/icon = SubResource("AtlasTexture_el5ef")
+theme_override_styles/normal = SubResource("StyleBoxTexture_15wa2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mhga8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_q8qxb")
+text = "y"
+icon = SubResource("AtlasTexture_oadfx")
+
+[node name="clicksoundtab" type="AudioStreamPlayer" parent="." unique_id=1433954115]
+stream = ExtResource("6_ucdb5")
+
+[node name="shoott" type="Control" parent="." unique_id=15602826]
+anchors_preset = 0
+offset_left = -770.0
+offset_top = 768.0
+offset_right = 766.0
+offset_bottom = 1024.0002
+
+[node name="HBoxContainer" type="HBoxContainer" parent="shoott" unique_id=1087676793]
+layout_mode = 0
+offset_right = 1536.0
+offset_bottom = 224.0
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="bat" type="Control" parent="shoott/HBoxContainer" unique_id=644786429]
+custom_minimum_size = Vector2(320, 176)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="sl" type="Button" parent="shoott/HBoxContainer/bat" unique_id=1254484181]
+visible = false
+custom_minimum_size = Vector2(17, 17)
+layout_mode = 0
+offset_left = -16.0
+offset_top = -8.0
+offset_right = 27.0
+offset_bottom = 20.0
+scale = Vector2(8, 8)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyh65")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k01ul")
+theme_override_styles/hover = SubResource("StyleBoxTexture_it385")
+text = "selesai"
+icon = SubResource("AtlasTexture_xog08")
+alignment = 2
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="bt" type="Button" parent="shoott/HBoxContainer/bat" unique_id=1430312345]
+custom_minimum_size = Vector2(17, 17)
+layout_mode = 0
+offset_left = -16.0
+offset_top = -8.0
+offset_right = 27.0
+offset_bottom = 20.0
+scale = Vector2(8, 8)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dixf5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7vdq1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dixf5")
+text = "batal"
+icon = SubResource("AtlasTexture_5mc4i")
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="shootor" type="Control" parent="shoott/HBoxContainer" unique_id=572969120]
+custom_minimum_size = Vector2(352, 176)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="sh" type="Button" parent="shoott/HBoxContainer/shootor" unique_id=931384512]
+custom_minimum_size = Vector2(17, 17)
+layout_mode = 0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 37.0
+offset_bottom = 20.0
+scale = Vector2(8, 8)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8j7oj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dgg5m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8j7oj")
+text = "tembak"
+icon = SubResource("AtlasTexture_dgg5m")
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="ter" type="Control" parent="shoott/HBoxContainer" unique_id=1443424772]
+visible = false
+custom_minimum_size = Vector2(320, 176)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="makan" type="Button" parent="shoott/HBoxContainer/ter" unique_id=1692416432]
+custom_minimum_size = Vector2(17, 17)
+layout_mode = 0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 33.0
+offset_bottom = 20.0
+scale = Vector2(8, 8)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("7_hdgf4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_o0b3j")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5mc4i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k2jas")
+text = "makan"
+icon = SubResource("AtlasTexture_dgg5m")
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[connection signal="pressed" from="tabarea/executab" to="." method="executebutpress"]
+[connection signal="pressed" from="tabarea/maintab/attackopts/ltroopbutton" to="." method="linearopt"]
+[connection signal="pressed" from="tabarea/maintab/attackopts/etroopbutton" to="." method="expoopt"]
+[connection signal="toggled" from="tabarea/maintab/attackspec/inputangraph/contlinier/gradlin" to="." method="gradlin_put"]
+[connection signal="toggled" from="tabarea/maintab/attackspec/inputangraph/contlinier/constlin" to="." method="constlin_put"]
+[connection signal="toggled" from="tabarea/maintab/attackspec/inputangraph/contexpo/multiexpo" to="." method="multiexpo_put"]
+[connection signal="toggled" from="tabarea/maintab/attackspec/inputangraph/contexpo/growthexpo" to="." method="growthexpo_put"]
+[connection signal="toggled" from="tabarea/maintab/attackspec/inputangraph/contexpo/constexpo" to="." method="constexpo_put"]
+[connection signal="toggled" from="tabarea/maintab/unreview" to="." method="unreview_toggled"]
+[connection signal="pressed" from="tabarea/maintab/exitbutton" to="." method="exitprres"]
+[connection signal="pressed" from="tabarea/maintab/numpad/buttone" to="." method="buttone"]
+[connection signal="pressed" from="tabarea/maintab/numpad/butttwo" to="." method="butttwo"]
+[connection signal="pressed" from="tabarea/maintab/numpad/buttthree" to="." method="buttthree"]
+[connection signal="pressed" from="tabarea/maintab/numpad/buttfour" to="." method="buttfour"]
+[connection signal="pressed" from="tabarea/maintab/numpad/buttfive" to="." method="buttfive"]
+[connection signal="pressed" from="tabarea/maintab/numpad/buttsix" to="." method="buttsix"]
+[connection signal="pressed" from="tabarea/maintab/numpad/buttseven" to="." method="buttseven"]
+[connection signal="pressed" from="tabarea/maintab/numpad/butteight" to="." method="butteight"]
+[connection signal="pressed" from="tabarea/maintab/numpad/buttnine" to="." method="buttnine"]
+[connection signal="pressed" from="tabarea/maintab/numpad/buttzero" to="." method="buttzero"]
+[connection signal="pressed" from="tabarea/maintab/numpad/buttkoma" to="." method="buttkoma"]
+[connection signal="pressed" from="tabarea/maintab/numpad/buttminus" to="." method="buttminus"]
+[connection signal="pressed" from="tabarea/maintab/numpad/buttdelete" to="." method="deletedigits"]
+[connection signal="toggled" from="tabarea/maintab/domianxy" to="." method="toggle_domain"]
+[connection signal="pressed" from="tabarea/maintab/swapxy" to="." method="_on_swapxy_pressed"]
+[connection signal="pressed" from="shoott/HBoxContainer/bat/sl" to="." method="selesaishot"]
+[connection signal="pressed" from="shoott/HBoxContainer/bat/bt" to="." method="batalshot"]
+[connection signal="pressed" from="shoott/HBoxContainer/shootor/sh" to="." method="shott"]

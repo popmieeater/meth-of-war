@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://bnlndb7mi14nu"]
+
+[ext_resource type="Texture2D" uid="uid://cvj6lj3racqlk" path="res://miscellaneous/dialui.png" id="1_nymao"]
+[ext_resource type="FontFile" uid="uid://cojiga7p4342y" path="res://comicallpixel.png" id="2_3tfx8"]
+[ext_resource type="FontFile" uid="uid://dm4awf8s8mfgw" path="res://m5x7.ttf" id="3_srnxl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tfx8"]
+atlas = ExtResource("1_nymao")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nymao"]
+atlas = ExtResource("1_nymao")
+region = Rect2(8, 8, 8, 8)
+
+[node name="dialpoppu" type="Node2D" unique_id=1441983852]
+
+[node name="Control" type="Control" parent="." unique_id=494217537]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -27.0
+offset_right = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=95948119]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 28.5
+theme_override_constants/separation = -3
+alignment = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/VBoxContainer" unique_id=1696041102]
+z_index = 1
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+texture = ExtResource("1_nymao")
+region_rect = Rect2(0, 0, 7, 7)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/NinePatchRect" unique_id=1086273288]
+layout_mode = 0
+offset_left = 3.0000005
+offset_top = 2.9999998
+offset_right = 87.99999
+offset_bottom = 9.389774
+scale = Vector2(0.4, 0.4)
+theme_override_fonts/font = ExtResource("2_3tfx8")
+text = "troop ally"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/VBoxContainer/NinePatchRect" unique_id=1168031498]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 139.0
+offset_bottom = 42.0
+scale = Vector2(0.25, 0.25)
+theme_override_constants/line_separation = -2
+theme_override_fonts/normal_font = ExtResource("3_srnxl")
+text = "TF you're on, dude? Marijuana?"
+scroll_active = false
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/VBoxContainer/NinePatchRect" unique_id=2122454748]
+z_index = -1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 41.0
+offset_bottom = 19.0
+texture = ExtResource("1_nymao")
+region_rect = Rect2(0, 8, 8, 8)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer" unique_id=1580616254]
+z_index = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_3tfx8")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="Control/VBoxContainer/TextureRect" unique_id=1992059523]
+z_index = -1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 8.0
+texture = SubResource("AtlasTexture_nymao")
+stretch_mode = 3

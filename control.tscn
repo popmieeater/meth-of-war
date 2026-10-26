@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b16445p5cadxx"]
+
+[node name="Control" type="Control" unique_id=1323358491]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="." unique_id=675428763]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Button2" type="Button" parent="." unique_id=341530341]
+layout_mode = 0
+offset_left = -17.0
+offset_top = 10.0
+offset_right = -5.0
+offset_bottom = 23.0

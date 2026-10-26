@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://dxmo4hvhs4yjf"]
+
+[ext_resource type="Texture2D" uid="uid://cjti5vrk2fots" path="res://characters/tank.png" id="1_6lwfj"]
+[ext_resource type="Shader" uid="uid://1asrqaspmpc7" path="res://allnemy.tres" id="1_yfqcd"]
+[ext_resource type="Texture2D" uid="uid://m3leq6ay7n11" path="res://miscellaneous/schader/enemycolorpal.png" id="2_lk6ub"]
+[ext_resource type="Texture2D" uid="uid://in2wsyvidcje" path="res://miscellaneous/schader/allycolorpal.png" id="3_i433e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mh3tg"]
+shader = ExtResource("1_yfqcd")
+shader_parameter/sawitkan = true
+shader_parameter/original_palette = ExtResource("3_i433e")
+shader_parameter/new_palette = ExtResource("2_lk6ub")
+shader_parameter/colors_count = 15
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ealj"]
+atlas = ExtResource("1_6lwfj")
+region = Rect2(192, 0, 48, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a62es"]
+atlas = ExtResource("1_6lwfj")
+region = Rect2(0, 40, 48, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfqcd"]
+atlas = ExtResource("1_6lwfj")
+region = Rect2(0, 0, 48, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i433e"]
+atlas = ExtResource("1_6lwfj")
+region = Rect2(48, 0, 48, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yfqcd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ealj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a62es")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfqcd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i433e")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lk6ub"]
+atlas = ExtResource("1_6lwfj")
+region = Rect2(144, 40, 48, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i433e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lk6ub")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mh3tg"]
+atlas = ExtResource("1_6lwfj")
+region = Rect2(192, 40, 48, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pku7x"]
+atlas = ExtResource("1_6lwfj")
+region = Rect2(0, 80, 48, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1d415"]
+atlas = ExtResource("1_6lwfj")
+region = Rect2(48, 80, 48, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2e7yj"]
+atlas = ExtResource("1_6lwfj")
+region = Rect2(96, 80, 48, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4taco"]
+atlas = ExtResource("1_6lwfj")
+region = Rect2(144, 80, 48, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqvyr"]
+atlas = ExtResource("1_6lwfj")
+region = Rect2(192, 80, 48, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egmgs"]
+atlas = ExtResource("1_6lwfj")
+region = Rect2(0, 120, 48, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sr6kl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mh3tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pku7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1d415")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2e7yj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4taco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqvyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egmgs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yfqcd"]
+radius = 16.0
+
+[node name="apodio" type="CharacterBody2D" unique_id=992251337]
+collision_layer = 2
+collision_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1886430257]
+material = SubResource("ShaderMaterial_mh3tg")
+sprite_frames = SubResource("SpriteFrames_yfqcd")
+autoplay = "default"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=1272200968]
+material = SubResource("ShaderMaterial_mh3tg")
+sprite_frames = SubResource("SpriteFrames_i433e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D/AnimatedSprite2D" unique_id=2081883297]
+material = SubResource("ShaderMaterial_mh3tg")
+sprite_frames = SubResource("SpriteFrames_sr6kl")
+autoplay = "default"
+frame_progress = 0.025234608
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1483842941]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_yfqcd")
+
+[node name="navitanktroop" type="NavigationObstacle2D" parent="." unique_id=111603053 groups=["troopnavimesh"]]
+position = Vector2(0, 6)
+radius = 16.05
+vertices = PackedVector2Array(-16, 0, -11, 11, 0, 16, 11, 11, 16, 0, 11, -11, 0, -16, -11, -11)
+affect_navigation_mesh = true
+carve_navigation_mesh = true
+
+[node name="navitanktank" type="NavigationObstacle2D" parent="." unique_id=933512567 groups=["tanknavimesh"]]
+position = Vector2(0, 6)
+vertices = PackedVector2Array(-16, 16, 16, 16, 16, -16, -16, -16)
+affect_navigation_mesh = true

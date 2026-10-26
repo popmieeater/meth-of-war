@@ -1,0 +1,52 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="MathOWar"
+run/main_scene="res://level.tscn"
+config/custom_user_dir_name="Matoa"
+config/features=PackedStringArray("4.6", "Mobile")
+boot_splash/image="uid://d3nxhflehokgn"
+config/icon="uid://720dssepxvil"
+
+[autoload]
+
+Gamemanag="*uid://bnix0e4c6yath"
+
+[display]
+
+window/size/viewport_width=1604
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/emulate_touch_from_mouse=false
+
+[global_group]
+
+troop_group=""
+troopnavimesh=""
+tanknavimesh=""
+
+[gui]
+
+fonts/dynamic_fonts/use_oversampling=false
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.19607843, 0.23529412, 0.22352941, 1)

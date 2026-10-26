@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bhdneg52jn86a"]
+
+[ext_resource type="Script" uid="uid://dlel0i36ahk5s" path="res://troop_bullet.gd" id="1_gju6f"]
+[ext_resource type="Texture2D" uid="uid://dkjexoqk1q1oe" path="res://projectiles/bullet.png" id="2_o6a7n"]
+[ext_resource type="PackedScene" uid="uid://spmpsc8n2onu" path="res://projectiles_bullet.tscn" id="3_w78x1"]
+
+[sub_resource type="Curve2D" id="Curve2D_kkek2"]
+bake_interval = 20.2
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 101, 112, 0, 0, 0, 0, 166, 95, 0, 0, 0, 0, 239, 52, 0, 0, 0, 0, 281, -30)
+}
+point_count = 4
+
+[node name="Path2D" type="Path2D" unique_id=1113540092]
+curve = SubResource("Curve2D_kkek2")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=1063505511]
+position = Vector2(101, 112)
+rotation = -0.25580856
+loop = false
+script = ExtResource("1_gju6f")
+
+[node name="Bullet" type="Sprite2D" parent="PathFollow2D" unique_id=1664232596]
+position = Vector2(-0.2373352, -1.0094299)
+rotation = 0.25580856
+texture = ExtResource("2_o6a7n")
+
+[node name="Node2D" type="Node2D" parent="PathFollow2D" unique_id=1015569993]
+
+[node name="TroopBullet" parent="PathFollow2D/Node2D" unique_id=1762467078 instance=ExtResource("3_w78x1")]
+position = Vector2(163, 95)
